@@ -6,11 +6,9 @@ import 'package:news_app/app_theme/themes.dart';
 import 'package:news_app/bloc/cubit.dart';
 import 'package:news_app/screens/News_layout.dart';
 import 'package:news_app/shared/bloc_observer.dart';
-import 'package:news_app/shared/cash_helper.dart';
 import 'package:news_app/shared/dio_helper.dart';
 
-void main() async {
-  await CashHelper.init();
+void main() {
   DioHelper.init();
   Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
